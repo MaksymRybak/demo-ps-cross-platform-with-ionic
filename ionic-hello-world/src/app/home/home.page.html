@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
       Blank
     </ion-title>
@@ -7,8 +7,16 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-item *ngFor="let item of [0, 1, 2, 3]" [routerLink]="['/', 'detail', item]">
+  <ion-list lines="full">
+    <ion-item *ngFor="let item of [0, 1, 2, 3]" [routerLink]="['/', 'detail', item]" color="dark">
+      <ion-avatar slot="start">
+        <img src="https://avatars2.githubusercontent.com/u/950327?s=400&u=de915177ecc12da0c78f80d8c472bb3eb6a8f2f0&v=4"
+          alt="">
+      </ion-avatar>
+      <ion-thumbnail slot="end">
+        <img src="https://avatars2.githubusercontent.com/u/950327?s=400&u=de915177ecc12da0c78f80d8c472bb3eb6a8f2f0&v=4"
+          alt="">
+      </ion-thumbnail>
       Item {{ item }}
     </ion-item>
   </ion-list>
