@@ -8,7 +8,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-list lines="full">
-    <ion-item *ngFor="let item of items" [routerLink]="['/', 'detail', item.id.value]" color="dark"
+    <ion-item *ngFor="let item of items" [routerLink]="['/', 'tabs', 'tab1', 'detail', item.id.value]" color="dark"
       (click)="showModal(item)">
       <ion-thumbnail slot="start">
         <img [src]="item.picture.thumbnail" alt="">
