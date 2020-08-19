@@ -1,3 +1,13 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu contentId="main">
+    <ion-content>
+      <h1>Side menu</h1>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item routerLink="/detail/1">Got to detail</ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
