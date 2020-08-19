@@ -16,7 +16,9 @@
       <p>{{ item.name.first }} {{ item.name.last}}</p>
     </ion-item>
   </ion-list>
+  <img [src]="photo" alt="" *ngIf="photo">
   <ion-button (click)="showAlert()">Show Alert</ion-button>
+  <ion-button (click)="takePhoto()">Take Photo</ion-button>
   <!-- <ion-button (click)="showModal()">Show Modal</ion-button> -->
 </ion-content>
 

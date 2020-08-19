@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Plugins, CameraResultType, CameraSource } from '@capacitor/core';
 import { HttpClient } from '@angular/common/http';
 import { AlertController, ModalController } from '@ionic/angular';
 import { ModalComponent } from '../modal/modal.component';
@@ -10,6 +11,7 @@ import { ModalComponent } from '../modal/modal.component';
 })
 export class HomePage {
   items = [];
+  photo: string;
 
   constructor(private http: HttpClient, private alertCtrl: AlertController, private modalCtrl: ModalController) {
 
@@ -59,5 +61,16 @@ export class HomePage {
     });
 
     modal.present();
+  }
+
+  async takePhoto() {
+    const { Camera } = Plugins;
+    const image = await Camera.getPhoto({
+      quality: 100,
+      allowEditing: false,
+      resultType: CameraResultType.DataUrl,
+      source: CameraSource.Camera
+    });
+    this.photo = image.dataUrl;
   }
 }
