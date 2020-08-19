@@ -12,14 +12,15 @@ import { ModalComponent } from '../modal/modal.component';
 export class HomePage {
   items = [];
   photo: string;
+  location: string;
 
   constructor(private http: HttpClient, private alertCtrl: AlertController, private modalCtrl: ModalController) {
 
   }
 
-  // ngOnInit() {
-  //   console.log('ngOnInit...');
-  // }
+  ngOnInit() {
+    console.log('ngOnInit...');
+  }
 
   ionViewDidEnter() {
     console.log('ionViewDidEnter...');
@@ -72,5 +73,11 @@ export class HomePage {
       source: CameraSource.Camera
     });
     this.photo = image.dataUrl;
+  }
+
+  async getLocation() {
+    const { Geolocation } = Plugins;
+    const currentPos = await Geolocation.getCurrentPosition();
+    this.location = `${currentPos.coords.latitude}:${currentPos.coords.longitude}`;
   }
 }
