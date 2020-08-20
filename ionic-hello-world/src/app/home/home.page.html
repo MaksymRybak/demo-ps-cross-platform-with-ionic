@@ -2,11 +2,12 @@
   <ion-toolbar color="primary">
     <ion-title>
       Blank
+      <ion-icon name="play"></ion-icon>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center">
   <ion-list lines="full">
     <ion-item *ngFor="let item of items" [routerLink]="['/', 'tabs', 'tab1', 'detail', item.id.value]" color="dark"
       (click)="showModal(item)">
@@ -16,6 +17,10 @@
       <p>{{ item.name.first }} {{ item.name.last}}</p>
     </ion-item>
   </ion-list>
+  <h1>Maksym</h1>
+  <div class="ion-text-right">
+    <h1>Rybak</h1>
+  </div>
   <pre>{{ location }}</pre>
   <img [src]="photo" alt="" *ngIf="photo">
   <ion-button (click)="showAlert()">Show Alert</ion-button>

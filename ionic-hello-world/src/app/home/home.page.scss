@@ -1,3 +1,10 @@
 ion-item {
   --min-height: 100px;
 }
+
+ion-title {
+  ion-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
