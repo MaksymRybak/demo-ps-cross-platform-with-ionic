@@ -5,6 +5,16 @@
       <ion-icon name="play"></ion-icon>
     </ion-title>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+    <ion-buttons slot="end">
+      <!-- we put this button to show how to add something on the right side of searchbar-->
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+        <!-- we use slot here to make iocn a pure one, without additional paddings eg -->
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding ion-text-center">
