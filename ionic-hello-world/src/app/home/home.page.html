@@ -33,12 +33,15 @@
     </ion-row>
   </ion-grid>
 
-  <!--
   <ion-list lines="full">
-    <ion-item *ngFor="let item of items" [routerLink]="['/', 'tabs', 'tab1', 'detail', item.id.value]" color="dark"
-      (click)="showModal(item)">
+    <ion-item
+      *ngFor="let item of items"
+      [routerLink]="['/', 'tabs', 'tab1', 'detail', item.id.value]"
+      color="dark"
+      (click)="showModal(item)"
+    >
       <ion-thumbnail slot="start">
-        <img [src]="item.picture.thumbnail" alt="">
+        <img [src]="item.picture.thumbnail" alt="" />
       </ion-thumbnail>
       <p>{{ item.name.first }} {{ item.name.last}}</p>
     </ion-item>
@@ -48,11 +51,11 @@
     <h1>Rybak</h1>
   </div>
   <pre>{{ location }}</pre>
-  <img [src]="photo" alt="" *ngIf="photo">
+  <img [src]="photo" alt="" *ngIf="photo" />
   <ion-button (click)="showAlert()">Show Alert</ion-button>
   <ion-button (click)="takePhoto()">Take Photo</ion-button>
   <ion-button (click)="getLocation()">Get Location</ion-button>
-  <!-- <ion-button (click)="showModal()">Show Modal</ion-button> -->
+  <ion-button (click)="showModal()">Show Modal</ion-button>
 </ion-content>
 
 <ion-footer>
